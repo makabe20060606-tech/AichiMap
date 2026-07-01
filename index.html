@@ -1,108 +1,30 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>愛知県インバウンド観光マップ</title>
 
-<title>愛知県インバウンド観光マップ</title>
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-<link
-rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
-
-<link rel="stylesheet" href="style.css">
-
-<script
-src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
-</script>
+  <!-- 自分のCSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>愛知県インバウンド観光マップ</h1>
-<p>ジャンル検索・観光地検索付き</p>
-</header>
+  <header>
+    <h1>愛知県インバウンド観光マップ</h1>
+    <p>東・南・北の端だけ表示する簡易版</p>
+  </header>
 
-<button class="menu-toggle" onclick="toggleMenu()">
-☰ ジャンル
-</button>
+  <!-- 地図を表示する箱 -->
+  <div id="map"></div>
 
-<div class="info">
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-<h3>検索</h3>
-
-<input
-type="text"
-id="searchInput"
-placeholder="観光地を検索"
-onkeyup="searchSpot()"
-class="search-box"
->
-
-<h3>ジャンル検索</h3>
-
-<button class="genre-btn"
-onclick="filterGenre('歴史')">
-🏯 歴史
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('自然')">
-🌿 自然
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('レジャー')">
-🎡 レジャー
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('文化')">
-🎨 文化
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('博物館')">
-🏛 博物館
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('買い物')">
-🛍 買い物
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('景観')">
-🌅 景観
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('アート')">
-🎭 アート
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('サブカル')">
-🎬 サブカル
-</button>
-
-<button class="genre-btn"
-onclick="filterGenre('ファミリー')">
-🐬 ファミリー
-</button>
-
-<button class="reset-btn"
-onclick="showAll()">
-全表示
-</button>
-
-</div>
-
-<div id="map"></div>
-
-<script src="main.js"></script>
-
+  <!-- 自分のJS -->
+  <script src="main.js"></script>
 </body>
 </html>
